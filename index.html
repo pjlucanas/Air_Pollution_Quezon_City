@@ -35,8 +35,8 @@
 <script>
   // initialize the map and tile layer
   var map = L.map('mapid').setView([14.6493, 121.0378], 16);
-  L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+  L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; OpenStreetMap contributors',
     subdomains: 'abcd',
     maxZoom: 19
   }).addTo(map);
@@ -70,6 +70,12 @@
       }
     }).addTo(map);
   });
+
+  // var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+  // var osmAttrib='Map data &copy; OpenStreetMap contributors';
+
+  // var osm2 = new L.TileLayer(osmUrl, {minZoom: 0, maxZoom: 13, attribution: osmAttrib});
+  // var miniMap = new L.Control.MiniMap(osm2).addTo(map);
 
 </script>
 </html>
